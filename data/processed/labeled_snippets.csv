@@ -1,0 +1,413 @@
+code_snippet,vulnerability_type,source
+document.write(data) ,xss,synthetic
+element.textContent = data // test,safe,synthetic
+"output = ""<div>"" + data + ""</div>"" ;",xss,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price
+",sql_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id)",mixed,synthetic
+"subprocess.call(""ls "" + input, shell=True) # debug",command_injection,synthetic
+document.write(input) + '',xss,synthetic
+logger.info(input) ;,safe,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) + ''",command_injection,synthetic
+"subprocess.run(""ping "" + input, shell=True) ",mixed,synthetic
+"return render_template(""index.html"", data=data)
+",safe,synthetic
+logger.info(id),safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,))
+",safe,synthetic
+"res.send(""<h1>"" + user_input + ""</h1>"") # debug",xss,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) // test",sql_injection,synthetic
+"html = f""<p>{name}</p>""
+",xss,synthetic
+element.innerHTML = data,xss,synthetic
+"exec(""ping "" + ip) // test",command_injection,synthetic
+"subprocess.call(""ls "" + param, shell=True) ;",command_injection,synthetic
+print(param) // test,safe,synthetic
+element.innerHTML = sanitize(value) ,mixed,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email
+",command_injection,synthetic
+"exec(""ping "" + ip) ;",command_injection,synthetic
+element.innerHTML = user_input # debug,xss,synthetic
+"res.send(""<h1>"" + id + ""</h1>"") ",xss,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId) + ''",safe,synthetic
+"subprocess.run([""ping"", data]) ;",safe,synthetic
+"res.send(""<h1>"" + user_input + ""</h1>"") + ''",xss,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + value + ''",xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") ",sql_injection,synthetic
+print(input) ,safe,synthetic
+"os.system(""ping "" + data) + ''",command_injection,synthetic
+"return render_template(""index.html"", data=data) + ''",safe,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}""
+",sql_injection,synthetic
+"return render_template(""index.html"", data=data) # debug",safe,synthetic
+"element.textContent = userId
+",safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,))",safe,synthetic
+element.textContent = input # debug,safe,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email # debug",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email ;",safe,synthetic
+logger.info(value) // test,safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,)) ",safe,synthetic
+html.escape(value) + '',safe,synthetic
+"print(value)
+",safe,synthetic
+"subprocess.call(""ls "" + userId, shell=True) # debug",command_injection,synthetic
+element.innerHTML = input,xss,synthetic
+"return render_template(""index.html"", data=data) # debug",safe,synthetic
+document.write(id) + '',xss,synthetic
+print(data) ;,safe,synthetic
+"subprocess.call(""ls "" + name, shell=True) + ''",command_injection,synthetic
+element.textContent = value ;,safe,synthetic
+"os.popen(""cat "" + filename) # debug",command_injection,synthetic
+document.write(user_input),xss,synthetic
+element.innerHTML = sanitize(value) + '',mixed,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) // test",command_injection,synthetic
+"os.popen(""cat "" + filename) # debug",command_injection,synthetic
+print(name) ;,safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,))
+",safe,synthetic
+"output = ""<div>"" + userId + ""</div>""",xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) + ''",mixed,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input)
+",command_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") // test",sql_injection,synthetic
+document.write(user_input) ;,xss,synthetic
+print(param),safe,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input)",command_injection,synthetic
+"os.system(""ping "" + user_input)
+",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + user_input ",sql_injection,synthetic
+"html = f""<p>{userId}</p>"" // test",xss,synthetic
+"subprocess.run([""ping"", name])
+",safe,synthetic
+"subprocess.run(""ping "" + input, shell=True) ",mixed,synthetic
+element.innerHTML = sanitize(value) + '',mixed,synthetic
+element.textContent = data ,safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) ",mixed,synthetic
+"os.system(""ping "" + param) ",command_injection,synthetic
+element.innerHTML = input ;,xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) + ''",mixed,synthetic
+"output = ""<div>"" + userId + ""</div>"" ",xss,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email ",command_injection,synthetic
+html.escape(userId),safe,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) // test",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId) # debug",safe,synthetic
+element.innerHTML = value // test,xss,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input)",command_injection,synthetic
+"exec(""ping "" + ip) // test",command_injection,synthetic
+element.textContent = data,safe,synthetic
+"html = f""<p>{data}</p>"" + ''",xss,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id))
+",sql_injection,synthetic
+"subprocess.call(""ls "" + name, shell=True) // test",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + userId // test",mixed,synthetic
+"html = f""<p>{data}</p>""
+",xss,synthetic
+document.write(data) + '',xss,synthetic
+"html = f""<p>{name}</p>""",xss,synthetic
+logger.info(data) # debug,safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) ",mixed,synthetic
+"element.textContent = input
+",safe,synthetic
+"subprocess.run([""ping"", input]) ;",safe,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + param // test",mixed,synthetic
+document.write(name) # debug,xss,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email ;",sql_injection,synthetic
+"res.send(""<h1>"" + name + ""</h1>"")",xss,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price # debug",sql_injection,synthetic
+"subprocess.call(""ls "" + userId, shell=True) // test",command_injection,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) ;",sql_injection,synthetic
+"subprocess.run(""ping "" + input, shell=True) + ''",mixed,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) # debug",sql_injection,synthetic
+"print(""<div>"" + input + ""</div>"") ",mixed,synthetic
+"exec(""ping "" + ip)
+",command_injection,synthetic
+"subprocess.call(""ls "" + id, shell=True) // test",command_injection,synthetic
+element.textContent = input ,safe,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId) + ''",safe,synthetic
+element.innerHTML = input ,xss,synthetic
+document.write(userId),xss,synthetic
+"os.system(""ping "" + value) ",command_injection,synthetic
+"subprocess.call(""ls "" + name, shell=True)
+",command_injection,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) ;",command_injection,synthetic
+html.escape(name),safe,synthetic
+"return render_template(""index.html"", data=data)
+",safe,synthetic
+print(data) + '',safe,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input)",command_injection,synthetic
+element.innerHTML = id ,xss,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price ",sql_injection,synthetic
+html.escape(id),safe,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price // test",sql_injection,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) // test",sql_injection,synthetic
+element.innerHTML = data # debug,xss,synthetic
+document.write(id) ,xss,synthetic
+element.innerHTML = param + '',xss,synthetic
+element.innerHTML = value // test,xss,synthetic
+"subprocess.call(""ls "" + param, shell=True) ;",command_injection,synthetic
+"element.innerHTML = value
+",xss,synthetic
+"os.popen(""cat "" + filename) // test",command_injection,synthetic
+element.innerHTML = sanitize(value) # debug,mixed,synthetic
+print(value) # debug,safe,synthetic
+"html = f""<p>{input}</p>""",xss,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) ",sql_injection,synthetic
+"os.popen(""cat "" + filename)
+",command_injection,synthetic
+"html = f""<p>{param}</p>""
+",xss,synthetic
+print(value) + '',safe,synthetic
+"os.popen(""cat "" + filename) ",command_injection,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" ",sql_injection,synthetic
+"res.send(""<h1>"" + value + ""</h1>"")",xss,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) // test",sql_injection,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) # debug",command_injection,synthetic
+"html = f""<p>{input}</p>"" // test",xss,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + value # debug",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + id
+",mixed,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" + ''",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + input # debug",mixed,synthetic
+"output = ""<div>"" + data + ""</div>"" ",xss,synthetic
+"subprocess.call(""ls "" + value, shell=True) ",command_injection,synthetic
+"os.system(""ping "" + user_input) + ''",command_injection,synthetic
+"output = ""<div>"" + value + ""</div>""",xss,synthetic
+document.write(user_input) // test,xss,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" // test",sql_injection,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price // test",sql_injection,synthetic
+"res.send(""<h1>"" + param + ""</h1>"")",xss,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input)",command_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,)) // test",safe,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email // test",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email + ''",sql_injection,synthetic
+"output = ""<div>"" + param + ""</div>"" ;",xss,synthetic
+element.innerHTML = value ;,xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,))
+",safe,synthetic
+"res.send(""<h1>"" + input + ""</h1>"") # debug",xss,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price # debug",sql_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") + ''",sql_injection,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" // test",sql_injection,synthetic
+"exec(""ping "" + ip) # debug",command_injection,synthetic
+"os.system(""ping "" + name) ;",command_injection,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price ;",sql_injection,synthetic
+"exec(""ping "" + ip)",command_injection,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input)
+",sql_injection,synthetic
+"logger.info(param)
+",safe,synthetic
+"subprocess.run([""ping"", input]) + ''",safe,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email // test",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + data
+",sql_injection,synthetic
+"subprocess.call(""ls "" + value, shell=True) ",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + name + ''",sql_injection,synthetic
+"exec(""ping "" + ip) # debug",command_injection,synthetic
+"output = ""<div>"" + name + ""</div>""
+",xss,synthetic
+"element.innerHTML = value
+",xss,synthetic
+"print(""<div>"" + data + ""</div>"")
+",mixed,synthetic
+element.textContent = value # debug,safe,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price // test",sql_injection,synthetic
+"res.send(""<h1>"" + input + ""</h1>"") // test",xss,synthetic
+"subprocess.run(""ping "" + input, shell=True) ;",mixed,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + data + ''",sql_injection,synthetic
+"html = f""<p>{user_input}</p>""
+",xss,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) ",sql_injection,synthetic
+element.textContent = param + '',safe,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) // test",command_injection,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) + ''",sql_injection,synthetic
+"return render_template(""index.html"", data=data) // test",safe,synthetic
+"os.popen(""cat "" + filename)
+",command_injection,synthetic
+"os.system(""ping "" + userId)
+",command_injection,synthetic
+"os.system(""ping "" + userId)",command_injection,synthetic
+document.write(input) # debug,xss,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) + ''",command_injection,synthetic
+"element.textContent = name
+",safe,synthetic
+"print(""<div>"" + input + ""</div>"")
+",mixed,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) ",mixed,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"")
+",sql_injection,synthetic
+"print(""<div>"" + id + ""</div>"") // test",mixed,synthetic
+element.textContent = id ,safe,synthetic
+"os.system(""ping "" + value) // test",command_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") ;",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + param",mixed,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) ;",command_injection,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" + ''",sql_injection,synthetic
+"os.system(""ping "" + name) + ''",command_injection,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price ",sql_injection,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input)",command_injection,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) ;",command_injection,synthetic
+"os.popen(""cat "" + filename) ;",command_injection,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) // test",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + user_input // test",sql_injection,synthetic
+"output = ""<div>"" + value + ""</div>""",xss,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) # debug",sql_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,)) // test",safe,synthetic
+"subprocess.call(""ls "" + data, shell=True) + ''",command_injection,synthetic
+"output = ""<div>"" + input + ""</div>"" ",xss,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}""",sql_injection,synthetic
+html.escape(data) ;,safe,synthetic
+"subprocess.call(""ls "" + userId, shell=True)",command_injection,synthetic
+"res.send(""<h1>"" + input + ""</h1>"") # debug",xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,)) # debug",safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) # debug",mixed,synthetic
+document.write(userId) ,xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") ;",safe,synthetic
+"subprocess.run([""ping"", data])
+",safe,synthetic
+"res.send(""<h1>"" + input + ""</h1>"") ",xss,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price # debug",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId) + ''",safe,synthetic
+"output = ""<div>"" + input + ""</div>"" ;",xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) # debug",mixed,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId) # debug",safe,synthetic
+print(input) ,safe,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" ",sql_injection,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price // test",sql_injection,synthetic
+element.textContent = param ,safe,synthetic
+element.innerHTML = sanitize(id) ;,mixed,synthetic
+"subprocess.call(""ls "" + value, shell=True) + ''",command_injection,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) ",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + id // test",sql_injection,synthetic
+"subprocess.run([""ping"", id]) ",safe,synthetic
+"html = f""<p>{data}</p>"" # debug",xss,synthetic
+html.escape(id) ,safe,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + input ;",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email ;",sql_injection,synthetic
+"html = f""<p>{userId}</p>""",xss,synthetic
+"res.send(""<h1>"" + param + ""</h1>"") ",xss,synthetic
+"output = ""<div>"" + name + ""</div>"" + ''",xss,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) // test",command_injection,synthetic
+"os.system(""ping "" + user_input) ;",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + name ;",mixed,synthetic
+element.textContent = value ,safe,synthetic
+element.innerHTML = sanitize(name),mixed,synthetic
+print(data) // test,safe,synthetic
+"subprocess.call(""ls "" + input, shell=True)
+",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId) + ''",safe,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + data",sql_injection,synthetic
+print(input) // test,safe,synthetic
+"print(""<div>"" + id + ""</div>"") + ''",mixed,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input)",sql_injection,synthetic
+element.innerHTML = value,xss,synthetic
+"print(""<div>"" + user_input + ""</div>"") ;",mixed,synthetic
+element.innerHTML = sanitize(user_input) + '',mixed,synthetic
+"subprocess.run([""ping"", userId]) # debug",safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") # debug",sql_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") ;",command_injection,synthetic
+"output = ""<div>"" + input + ""</div>"" ",xss,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) + ''",sql_injection,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email",sql_injection,synthetic
+element.textContent = userId,safe,synthetic
+"html = f""<p>{user_input}</p>"" + ''",xss,synthetic
+"exec(""ping "" + ip)
+",command_injection,synthetic
+"res.send(""<h1>"" + param + ""</h1>"")
+",xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id)",mixed,synthetic
+"os.system(""ping "" + input) ",command_injection,synthetic
+"subprocess.run(""ping "" + input, shell=True)
+",mixed,synthetic
+"os.popen(""cat "" + filename) // test",command_injection,synthetic
+document.write(name),xss,synthetic
+"document.write(user_input)
+",xss,synthetic
+document.write(data) // test,xss,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email + ''",sql_injection,synthetic
+element.innerHTML = sanitize(userId) ,mixed,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email ",sql_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) // test",mixed,synthetic
+element.innerHTML = userId + '',xss,synthetic
+element.innerHTML = data,xss,synthetic
+"element.innerHTML = name
+",xss,synthetic
+document.write(data) ,xss,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) ;",sql_injection,synthetic
+"return render_template(""index.html"", data=data) + ''",safe,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" // test",xss,synthetic
+"os.system(""ping "" + name) + ''",command_injection,synthetic
+"output = ""<div>"" + userId + ""</div>"" // test",xss,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id) // test",mixed,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) ;",sql_injection,synthetic
+html.escape(value) // test,safe,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + id ;",sql_injection,synthetic
+"os.popen(""cat "" + filename) + ''",command_injection,synthetic
+"subprocess.run([""ping"", userId])",safe,synthetic
+html.escape(input) ;,safe,synthetic
+"query = ""SELECT * FROM products WHERE price < "" + max_price // test",sql_injection,synthetic
+"exec(""ping "" + ip) ;",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + input # debug",mixed,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) + ''",command_injection,synthetic
+"return render_template(""index.html"", data=data) ",safe,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") + ''",sql_injection,synthetic
+"os.popen(""cat "" + filename) // test",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + user_input # debug",command_injection,synthetic
+document.write(param) + '',xss,synthetic
+"os.popen(""cat "" + filename) ",command_injection,synthetic
+"subprocess.call(""ls "" + user_input, shell=True) ",command_injection,synthetic
+"os.system(""ping "" + input) ",command_injection,synthetic
+"os.system(""ping "" + input)",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" + userId // test",mixed,synthetic
+"exec(""ping "" + ip)
+",command_injection,synthetic
+"output = ""<div>"" + data + ""</div>""",xss,synthetic
+"db.query(""SELECT * FROM users WHERE id="" + str(id)) ;",sql_injection,synthetic
+"return render_template(""index.html"", data=data) # debug",safe,synthetic
+"output = ""<div>"" + input + ""</div>""",xss,synthetic
+html.escape(name) + '',safe,synthetic
+"Runtime.getRuntime().exec(""cmd "" + input) ;",command_injection,synthetic
+"subprocess.call(""ls "" + data, shell=True)
+",command_injection,synthetic
+"element.innerHTML = sanitize(input)
+",mixed,synthetic
+"subprocess.call(""ls "" + value, shell=True) ;",command_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"" + id)
+",mixed,synthetic
+"res.send(""<h1>"" + value + ""</h1>"") + ''",xss,synthetic
+"subprocess.call(""ls "" + input, shell=True) # debug",command_injection,synthetic
+"exec(""ping "" + ip) ",command_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE name='"" + name + ""'"") + ''",command_injection,synthetic
+"output = ""<div>"" + data + ""</div>"" ",xss,synthetic
+"subprocess.call(""ls "" + name, shell=True) ",command_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,)) // test",safe,synthetic
+"element.innerHTML = value
+",xss,synthetic
+"os.system(""ping "" + user_input)",command_injection,synthetic
+"subprocess.call(""ls "" + value, shell=True)
+",command_injection,synthetic
+"subprocess.call(""ls "" + input, shell=True) ;",command_injection,synthetic
+"statement.executeQuery(""SELECT * FROM users WHERE id="" + input) // test",sql_injection,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}""
+",sql_injection,synthetic
+"cursor.execute(""SELECT * FROM users WHERE id = %s"", (user_id,)) ",safe,synthetic
+"os.popen(""cat "" + filename) ",command_injection,synthetic
+element.innerHTML = id ,xss,synthetic
+element.innerHTML = name,xss,synthetic
+"query = ""SELECT * FROM users WHERE id = "" + value
+",sql_injection,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}"" # debug",command_injection,synthetic
+print(param) ,safe,synthetic
+"subprocess.call(""ls "" + name, shell=True) // test",command_injection,synthetic
+"html = f""<p>{name}</p>"" # debug",xss,synthetic
+element.textContent = param // test,safe,synthetic
+"query = ""SELECT * FROM users WHERE id = ?"" ; stmt.setInt(1, userId)
+",safe,synthetic
+"sql = f""SELECT * FROM users WHERE id={user_id}""",xss,synthetic
+"return render_template(""index.html"", data=data) ",safe,synthetic
+"output = ""<div>"" + value + ""</div>"" ",xss,synthetic
+html.escape(name),safe,synthetic
+"element.textContent = userId
+",safe,synthetic
+"os.popen(""cat "" + filename) // test",command_injection,synthetic
+"query = ""SELECT * FROM users WHERE email = %s"" % email # debug",sql_injection,synthetic

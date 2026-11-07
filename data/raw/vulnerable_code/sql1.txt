@@ -1,0 +1,3 @@
+String query = "SELECT * FROM users WHERE id = " + userInput;
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery(query);

@@ -1,0 +1,5 @@
+code,labels
+"SELECT * FROM users WHERE id = " + user,"sql_injection"
+"os.system(user_input)","command_injection"
+"<h1>" + user + "</h1>","xss"
+"SELECT * FROM users WHERE id=" + user + "; os.system(user)","sql_injection,command_injection"
